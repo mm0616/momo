@@ -1,0 +1,59 @@
+<script defer src="main.bundle.js"></script>
+
+<category id="esp8266_web" name="ESP8266-UNO WebLink" colour="20">
+<!-- 分隔线：控制功能 ↔ 传感器功能 -->
+  <sep></sep>
+
+  <!-- 第三组：传感器功能（标题+块） -->
+  <label text="ESP8266 代码块" colour="20" font="bold 14px Arial"></label>
+
+ <block type="wifi_init">
+    <value name="SSID">
+      <shadow type="text">
+        <field name="TEXT">ChinaNet-2.4G-0DF0</field>
+      </shadow>
+    </value>
+    <value name="PASSWD">
+      <shadow type="text">
+        <field name="TEXT">ChinaNet@233</field>
+      </shadow>
+    </value>
+  </block>
+
+  
+  <block type="wifi_read_ip">
+  </block>  
+
+  <block type="wifi_button_set">
+  </block>
+
+  <block type="wifi_read_sensor_set">
+  </block>
+
+  <block type="wifi_client_init">
+  </block>
+
+  <!-- 分隔线：控制功能 ↔ 传感器功能 -->
+  <sep></sep>
+
+  <!-- 第三组：传感器功能（标题+块） -->
+  <label text="UNO 代码块" colour="20" font="bold 14px Arial"></label>
+  
+  <block type="wifi_button_command">
+  </block>
+
+    <block type="wifi_button_ack">
+  </block>
+
+  <block type="wifi_data_read">
+    <value name = "value">
+      <shadow type = "math_number">
+        <field name = "NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+
+    <block type="wifi_data_send_ack">
+  </block>
+
+</category>
