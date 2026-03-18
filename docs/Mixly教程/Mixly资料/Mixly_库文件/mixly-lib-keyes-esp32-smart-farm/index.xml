@@ -1,0 +1,260 @@
+<script defer src="main.bundle.js"></script>
+<category id="smart_farm" name="ESP32 智慧农场" colour="20">
+
+  <!--          模拟输出               -->
+  <block type="ke_a_Write">
+    <value name="PIN">
+      <shadow type="pins_pwm">
+      <field name="PIN">27</field>
+      </shadow>
+    </value>
+    <value name="NUM">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+
+  <!--         LED               -->
+
+  <block type="ke_led">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">27</field>
+      </shadow>
+    </value>
+  </block>
+
+  <!--         relay               -->
+
+  <block type="ke_relay">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">25</field>
+      </shadow>
+    </value>
+  </block>
+
+  <!--          蜂鸣器               -->
+
+  <block type="ke_tone01"></block>
+
+  <block type="ke_buzzer">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">16</field>
+      </shadow>
+    </value>
+    <value name="FREQUENCY">
+      <shadow type="ke_tone01">
+      </shadow>
+    </value>
+  </block>
+
+
+  <block type="ke_music">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">16</field>
+      </shadow>
+    </value>
+
+  </block>
+
+
+  <block type="ke_notone">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">16</field>
+      </shadow>
+    </value>
+  </block>
+
+
+  <block type="ke_motor2">
+    <value name="PIN1">
+      <shadow type="pins_digital">
+        <field name="PIN">18</field>
+      </shadow>
+    </value>
+    <value name="PIN2">
+      <shadow type="pins_digital">
+        <field name="PIN">19</field>
+      </shadow>
+    </value>
+    <value name="SPEED2">
+      <shadow type="math_number">
+        <field name="NUM">255</field>
+      </shadow>
+    </value>
+  </block>
+
+  <!--      servo 舵机        	 -->
+
+
+  <block type="ke_servo">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">26</field>
+      </shadow>
+    </value>
+    <value name="angle">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+    <value name="time">
+      <shadow type="math_number">
+        <field name="NUM">0</field>
+      </shadow>
+    </value>
+  </block>
+
+  <block type="ke_servo_r">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">26</field>
+      </shadow>
+    </value>
+  </block>
+
+
+  <!--          人体红外传感器               -->
+
+  <block type="ke_ir_g">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">23</field>
+      </shadow>
+    </value>
+  </block>
+
+
+  <!--          按键传感器               -->
+  <block type="ke_button">
+    <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">5</field>
+      </shadow>
+    </value>
+  </block>
+    <!--      光线传感器            -->
+  <block type="ke_light">
+    <value name="PIN">
+      <shadow type="pins_analog">
+        <field name="PIN">34</field>
+      </shadow>
+    </value>
+  </block>
+  <!--      雨水传感器            -->
+  <block type="ke_steam">
+    <value name="PIN">
+      <shadow type="pins_analog">
+        <field name="PIN">35</field>
+      </shadow>
+    </value>
+  </block>
+  <!--      土壤湿度传感器            -->
+  <block type="ke_soil">
+    <value name="PIN">
+      <shadow type="pins_analog">
+        <field name="PIN">32</field>
+      </shadow>
+    </value>
+  </block>
+    <!--      水位传感器            -->
+  <block type="ke_water">
+    <value name="PIN">
+      <shadow type="pins_analog">
+        <field name="PIN">33</field>
+      </shadow>
+    </value>
+  </block>
+
+  <!--              温湿度传感器              -->
+
+  <block type="ke_DHT">
+      <value name="PIN">
+      <shadow type="pins_digital">
+        <field name="PIN">17</field>
+      </shadow>
+    </value>
+  </block>
+  <!--         超声波传感器               -->   
+		<block type="ke_sr04">
+			<value name="PIN1">
+				<shadow type="pins_digital">
+					<field name="PIN">12</field>
+				</shadow>
+			</value>
+			<value name="PIN2">
+				<shadow type="pins_digital">
+					<field name="PIN">13</field>
+				</shadow>
+			</value>	
+		</block>
+  <!--                1602LCD                    -->
+  <block type="group_lcd_init2">
+    <value name="device">
+      <shadow type="math_number">
+        <field name="NUM">0x27</field>
+      </shadow>
+    </value>
+    <value name="SCL">
+        <shadow type="pins_digital">
+            <field name="PIN">22</field>
+        </shadow>
+    </value>
+    <value name="SDA">
+        <shadow type="pins_digital">
+            <field name="PIN">21</field>
+        </shadow>
+    </value>
+  </block>
+
+  <block type="group_lcd_print">
+    <value name="TEXT">
+      <shadow type="text">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+
+    <value name="TEXT2">
+      <shadow type="text">
+        <field name="TEXT"></field>
+      </shadow>
+    </value>
+  </block>
+  <block type="group_lcd_power">
+    <field name="STAT">clear</field>
+  </block>
+  
+  <block type="wifi_init">
+    <value name="SSID">
+      <shadow type="text">
+        <field name="TEXT">ChinaNet-2.4G-0DF0</field>
+      </shadow>
+    </value>
+    <value name="PASSWD">
+      <shadow type="text">
+        <field name="TEXT">ChinaNet@233</field>
+      </shadow>
+    </value>
+  </block>
+
+    <block type="wifi_read_ip">
+    </block>
+
+    <block type="wifi_client_init">
+    </block>
+
+    <block type="wifi_client_connected">
+    </block>
+
+    <block type="wifi_send_data">
+    </block>
+
+    <block type="wifi_read_data">
+    </block>
+
+</category>
