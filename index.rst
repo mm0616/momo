@@ -6,6 +6,7 @@
    README.md
    docs/产品介绍/产品介绍
    docs/ArduinoTutorial/2.Arduino 教程.rst
+   docs/MixlyTutorial/3.Mixly 教程.rst
 
 
 
