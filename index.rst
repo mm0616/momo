@@ -1,13 +1,10 @@
-
 .. toctree::
-   :maxdepth: 3
-   :caption: KE3100 Keyes ESP32物联网智能农场学习套件 基于Arduino
+   :maxdepth: 1
+   :caption: KE3106 语音控制与WiFi控制扩展包
 
-   README.md
    docs/产品介绍/产品介绍
-
-
-
+   docs/ArduinoTutorial/arduinoRST
+   docs/MixlyTutorial/mixlyRST
 
 
 

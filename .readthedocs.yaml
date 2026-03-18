@@ -8,6 +8,8 @@ build:
 sphinx:
   configuration: conf.py
 
+formats:
+    - pdf
 
 python:
     install:
